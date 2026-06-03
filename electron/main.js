@@ -95,7 +95,13 @@ function python3Bin() {
     }
     return "python";
   }
-  for (const p of ["/opt/homebrew/bin/python3","/usr/local/bin/python3","/usr/bin/python3"]) {
+  for (const p of [
+    "/opt/homebrew/bin/python3.14", "/usr/local/bin/python3.14",
+    "/opt/homebrew/bin/python3.13", "/usr/local/bin/python3.13",
+    "/opt/homebrew/bin/python3.12", "/usr/local/bin/python3.12",
+    "/opt/homebrew/bin/python3",    "/usr/local/bin/python3",
+    "/usr/bin/python3",
+  ]) {
     if (fs.existsSync(p)) return p;
   }
   return "python3";
