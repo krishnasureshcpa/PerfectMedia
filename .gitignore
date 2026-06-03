@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Electron build output (intermediate artifacts only — not releases/)
+dist/
+
+# OS
+.DS_Store
+*.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temp
+*.tmp
+*.asar
+
+# Env
+.env
+.env.local
+.env.production.local
+
+# releases/ is intentionally tracked (pre-built binaries for GitHub download)
+# Do NOT add releases/ here

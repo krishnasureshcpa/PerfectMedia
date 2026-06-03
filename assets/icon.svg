@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- Background — deep near-black -->
+  <rect width="1024" height="1024" rx="220" fill="#08090E"/>
+
+  <!-- Subtle outer ring -->
+  <rect x="80" y="80" width="864" height="864" rx="180" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="2"/>
+
+  <!-- Film perforation marks — top (7 holes) -->
+  <rect x="116" y="120" width="52" height="36" rx="7" fill="rgba(255,255,255,0.11)"/>
+  <rect x="216" y="120" width="52" height="36" rx="7" fill="rgba(255,255,255,0.11)"/>
+  <rect x="372" y="120" width="52" height="36" rx="7" fill="rgba(255,255,255,0.11)"/>
+  <rect x="472" y="120" width="52" height="36" rx="7" fill="rgba(255,255,255,0.11)"/>
+  <rect x="628" y="120" width="52" height="36" rx="7" fill="rgba(255,255,255,0.11)"/>
+  <rect x="728" y="120" width="52" height="36" rx="7" fill="rgba(255,255,255,0.11)"/>
+  <rect x="856" y="120" width="52" height="36" rx="7" fill="rgba(255,255,255,0.11)"/>
+
+  <!-- Film perforation marks — bottom (7 holes) -->
+  <rect x="116" y="868" width="52" height="36" rx="7" fill="rgba(255,255,255,0.11)"/>
+  <rect x="216" y="868" width="52" height="36" rx="7" fill="rgba(255,255,255,0.11)"/>
+  <rect x="372" y="868" width="52" height="36" rx="7" fill="rgba(255,255,255,0.11)"/>
+  <rect x="472" y="868" width="52" height="36" rx="7" fill="rgba(255,255,255,0.11)"/>
+  <rect x="628" y="868" width="52" height="36" rx="7" fill="rgba(255,255,255,0.11)"/>
+  <rect x="728" y="868" width="52" height="36" rx="7" fill="rgba(255,255,255,0.11)"/>
+  <rect x="856" y="868" width="52" height="36" rx="7" fill="rgba(255,255,255,0.11)"/>
+
+  <!-- Main screen panel — liquid glass -->
+  <rect x="116" y="178" width="792" height="668" rx="18" fill="rgba(255,255,255,0.035)"/>
+  <rect x="116" y="178" width="792" height="668" rx="18" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+  <!-- Top edge refraction highlight -->
+  <rect x="117" y="179" width="790" height="2.5" rx="1" fill="rgba(255,255,255,0.1)"/>
+
+  <!-- RED SCAN LINE — golden ratio position within panel (~38.2% from top) -->
+  <!-- Panel top: 178, height: 668 → 178 + 668*0.382 = 178 + 255 = 433 -->
+  <rect x="116" y="433" width="792" height="7" rx="3.5" fill="#FF2020"/>
+  <!-- Scan line ambient glow -->
+  <rect x="116" y="424" width="792" height="24" rx="12" fill="rgba(255,32,32,0.10)"/>
+
+  <!-- Play triangle — geometric, bold white — upper half of panel -->
+  <!-- Vertically centered in upper zone: 178 to 433, center = 305 -->
+  <!-- Triangle height: 180px, width: 156px -->
+  <path d="M 400 215 L 400 395 L 644 305 Z" fill="white" fill-opacity="0.95"/>
+
+  <!-- Triple-dot "progress indicator" — lower half of panel -->
+  <!-- Lower zone center: 433 to 846, center Y = 640 -->
+  <circle cx="452" cy="640" r="20" fill="white" fill-opacity="0.65"/>
+  <circle cx="512" cy="640" r="20" fill="white" fill-opacity="0.40"/>
+  <circle cx="572" cy="640" r="20" fill="white" fill-opacity="0.20"/>
+</svg>

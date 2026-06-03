@@ -1,0 +1,90 @@
+{
+  "name": "perfectmedia",
+  "version": "1.0.0",
+  "description": "Offline AI media conversion, subtitles, and 4K/8K upscaling",
+  "author": "PerfectMedia",
+  "private": true,
+  "main": "electron/main.js",
+  "homepage": "./",
+  "scripts": {
+    "dev":        "next dev",
+    "build":      "next build",
+    "start":      "next start",
+    "electron":   "electron .",
+    "dist:mac":   "next build && electron-builder --mac --arm64",
+    "dist:win":   "next build && electron-builder --win",
+    "dist:all":   "next build && electron-builder --mac --win",
+    "release":    "npm run dist:mac && cp dist/PerfectMedia-1.0.0-arm64.dmg releases/PerfectMedia.dmg && echo '✓ releases/PerfectMedia.dmg updated'"
+  },
+  "dependencies": {
+    "next": "15.3.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "lucide-react": "^0.383.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5",
+    "tailwindcss": "^3.4.1",
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3",
+    "concurrently": "^8.2.2",
+    "wait-on": "^7.2.0"
+  },
+  "build": {
+    "appId": "com.perfectmedia.app",
+    "productName": "PerfectMedia",
+    "copyright": "Copyright © 2025 PerfectMedia. All rights reserved.",
+    "directories": { "output": "dist" },
+    "files": [
+      "out/**/*",
+      "electron/**/*",
+      "assets/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "extraMetadata": {
+      "description": "Offline AI media conversion, subtitles, and 4K/8K upscaling"
+    },
+    "mac": {
+      "category": "public.app-category.video",
+      "icon": "assets/icon.icns",
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "entitlements": "entitlements.mac.plist",
+      "entitlementsInherit": "entitlements.mac.plist",
+      "target": [
+        { "target": "dmg", "arch": ["arm64"] },
+        { "target": "dir", "arch": ["arm64"] }
+      ]
+    },
+    "dmg": {
+      "title": "PerfectMedia",
+      "icon": "assets/icon.icns",
+      "background": "assets/dmg-background.png",
+      "window": { "width": 540, "height": 380 },
+      "contents": [
+        { "x": 150, "y": 190, "type": "file" },
+        { "x": 390, "y": 190, "type": "link", "path": "/Applications" }
+      ]
+    },
+    "win": {
+      "icon": "assets/icon.png",
+      "target": [
+        { "target": "nsis", "arch": ["x64"] },
+        { "target": "portable", "arch": ["x64"] }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "PerfectMedia"
+    }
+  }
+}

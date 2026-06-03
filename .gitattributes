@@ -1,0 +1,6 @@
+# Track binary release files with Git LFS (GitHub limit: 100 MB per file)
+releases/*.dmg    filter=lfs diff=lfs merge=lfs -text
+releases/*.exe    filter=lfs diff=lfs merge=lfs -text
+releases/*.zip    filter=lfs diff=lfs merge=lfs -text
+assets/*.icns     filter=lfs diff=lfs merge=lfs -text
+assets/*.png      binary
